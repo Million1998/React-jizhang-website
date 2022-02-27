@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import React from 'react';
-import 'icons/tag.svg';
-import 'icons/money.svg';
-import 'icons/chart.svg';
+import Icon from './Icon';
 
 
 const NavWrapper = styled.nav`
@@ -27,21 +25,15 @@ const Nav = () =>{
     <NavWrapper>
       <ul>
         <li>
-          <svg className="icon" >
-            <use xlinkHref="#tag" />
-          </svg>
+          <Icon name="tag"/>
           <Link to="/tags">标签页</Link>
         </li>
         <li>
-          <svg className="icon">
-            <use xlinkHref="#money" />
-          </svg>
+          <Icon name="money"/>
           <Link to="/money">记账页</Link>
         </li>
         <li>
-          <svg className="icon">
-            <use xlinkHref="#chart" />
-          </svg>
+          <Icon name="chart"/>
           <Link to="/statistics">统计页</Link>
         </li>
       </ul>

@@ -4,7 +4,6 @@ import {
   Switch,
   Redirect,
   Route,
-  Link
 } from 'react-router-dom';
 import styled from 'styled-components';
 import Nav from './components/Nav';
@@ -41,7 +40,9 @@ function App() {
             </Route>
           </Switch>
         </Main>
+
         <Nav/>
+
       </Wrapper>
     </Router>
   );
