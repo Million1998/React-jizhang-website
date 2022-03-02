@@ -2,6 +2,8 @@ import React from 'react';
 import 'icons/tag.svg';
 import 'icons/money.svg';
 import 'icons/chart.svg';
+import 'icons/right.svg'
+import 'icons/left.svg'
 
 type Props = {
   name: string
