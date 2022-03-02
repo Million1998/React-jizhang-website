@@ -5,6 +5,8 @@ import Layout from '../components/Layout';
 import Icon from '../components/Icon';
 import {Button} from '../components/Button';
 import styled from 'styled-components';
+import {Input} from '../components/Input';
+import {Center} from '../components/Center';
 
 type Params = {
   id: string
@@ -19,6 +21,12 @@ const Topbar = styled.header`
   background: white;
 `;
 
+const InputWrapper = styled.div`
+  background: white;
+  padding: 0 16px;
+  margin-top: 8px;
+`;
+
 const Tag: React.FC = () => {
   const {tags} = useTags();
   let {id} = useParams<Params>();
@@ -31,14 +39,13 @@ const Tag: React.FC = () => {
         <Icon/>
 
       </Topbar>
+      <InputWrapper>
+        <Input label="标签名" type='text' placeholder='标签名'/>
+      </InputWrapper>
       <div>
-        <label>
-          <span>标签名</span>
-          <input type="text" placeholder="标签名"/>
-        </label>
-      </div>
-      <div>
-        <Button>删除标签</Button>
+        <Center>
+          <Button>删除标签</Button>
+        </Center>
       </div>
     </Layout>
   );
