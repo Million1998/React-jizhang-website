@@ -5,6 +5,7 @@ import {NoteSection} from './Money/NoteSection';
 import {NumberPadSection} from './Money/NumberPadSection';
 import {TagsSection} from './Money/TagsSection';
 import {useRecords} from '../hooks/useRecords';
+import styled from 'styled-components';
 
 /*const MyLayout = styled(Layout)`
     display: flex;
@@ -18,6 +19,10 @@ const defaultFormData = {
   amount: 0
 };
 
+const CategoryWrapper = styled.div`
+      background:#c4c4c4;
+`;
+
 function Money() {
   const [selected, setSelected] = useState(defaultFormData);
   const {addRecord} = useRecords();
@@ -29,19 +34,18 @@ function Money() {
   };
   const submit = () => {
     addRecord(selected);
-    alert('保存成功');
     setSelected(defaultFormData);
   };
   return (
     <Layout>
-      {JSON.stringify(selected)}
-      <hr/>
       <TagsSection value={selected.tagIds}
                    onChange={(tagIds) => onChange({tagIds})}/>
       <NoteSection value={selected.note}
                    onChange={(note) => onChange({note})}/>
-      <CategorySection value={selected.category}
-                       onChange={(category) => onChange({category})}/>
+      <CategoryWrapper>
+        <CategorySection value={selected.category}
+                         onChange={(category) => onChange({category})}/>
+      </CategoryWrapper>
       <NumberPadSection value={selected.amount}
                         onChange={(amount) => onChange({amount})}
                         onOk={submit}/>
