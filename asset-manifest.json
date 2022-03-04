@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-jizhang-website/static/css/main.dfd72416.css",
+    "main.js": "/React-jizhang-website/static/js/main.5ee08e9f.js",
+    "index.html": "/React-jizhang-website/index.html",
+    "main.dfd72416.css.map": "/React-jizhang-website/static/css/main.dfd72416.css.map",
+    "main.5ee08e9f.js.map": "/React-jizhang-website/static/js/main.5ee08e9f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfd72416.css",
+    "static/js/main.5ee08e9f.js"
+  ]
+}
